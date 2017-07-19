@@ -1,24 +1,17 @@
 execute pathogen#infect()
 
-if !exists("g:syntax_on")
-    syntax enable " enable syntax processing
-endif
+syntax on
 
+filetype plugin indent on
+
+" always display status line
 set laststatus=2
 
 set encoding=utf-8
 
-let g:airline_powerline_fonts=1
-
-let g:airline_theme="zenburn"
-
-"if !exists('g:airline_symbols')
-"    let g:airline_symbols = {}
-"endif
-
-filetype plugin indent on
-
 colorscheme gruvbox
+
+set background=dark
  
 "------------------------------------------------------------
 " Must have options
@@ -79,4 +72,4 @@ autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set mouse=a
 
 " 80th character idicator
-set colorcolumn=80
+set colorcolumn=90
